@@ -8,6 +8,7 @@
 import wpilib
 from rev.color import ColorSensorV3
 
+
 class MyRobot(wpilib.TimedRobot):
     """
         This is a simple example to show the values that can be read from the REV
@@ -18,7 +19,7 @@ class MyRobot(wpilib.TimedRobot):
         self.colorSensor = ColorSensorV3(wpilib.I2C.Port.kOnboard)
 
     def robotPeriodic(self):
-        
+
         # The method GetColor() returns a normalized color value from the sensor and can be
         # useful if outputting the color to an RGB LED or similar. To
         # read the raw color, use GetRawColor().
@@ -38,7 +39,6 @@ class MyRobot(wpilib.TimedRobot):
         wpilib.SmartDashboard.putNumber("Green", detectedColor.green)
         wpilib.SmartDashboard.putNumber("Blue", detectedColor.blue)
         wpilib.SmartDashboard.putNumber("IR", ir)
-        
 
         # In addition to RGB IR values, the color sensor can also return an
         # infrared proximity value. The chip contains an IR led which will emit
@@ -53,5 +53,6 @@ class MyRobot(wpilib.TimedRobot):
 
         wpilib.SmartDashboard.putNumber("Proximity", proximity)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     wpilib.run(MyRobot)

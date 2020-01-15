@@ -1,4 +1,3 @@
-
 from . import _init_rev_color
 from .version import version as __version__
 
