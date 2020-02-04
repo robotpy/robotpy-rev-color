@@ -52,7 +52,8 @@ class MyRobot(wpilib.TimedRobot):
         # Run the color match algorithm on our detected color. The confidence
         # specifies how close the detectedColor has to be to one of your colors
         # for it to match.
-        match = self.colorMatcher.matchClosestColor(detectedColor, 0.8)
+        confidence = 0.0
+        match = self.colorMatcher.matchClosestColor(detectedColor, confidence)
 
         colorString = ""
 
@@ -73,6 +74,7 @@ class MyRobot(wpilib.TimedRobot):
         wpilib.SmartDashboard.putNumber("Red", detectedColor.red)
         wpilib.SmartDashboard.putNumber("Green", detectedColor.green)
         wpilib.SmartDashboard.putNumber("Blue", detectedColor.blue)
+        wpilib.SmartDashboard.putNumber("Confidence", confidence)
         wpilib.SmartDashboard.putString("Detected Color", colorString)
 
 
