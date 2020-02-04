@@ -20,9 +20,9 @@ class MyRobot(wpilib.TimedRobot):
 
     def robotPeriodic(self):
 
-        # The method GetColor() returns a normalized color value from the sensor and can be
+        # The method getColor() returns a normalized color value from the sensor and can be
         # useful if outputting the color to an RGB LED or similar. To
-        # read the raw color, use GetRawColor().
+        # read the raw color, use getRawColor().
 
         # The color sensor works best when within a few inches from an object in
         # well lit conditions (the built in LED is a big help here!). The farther
@@ -53,6 +53,18 @@ class MyRobot(wpilib.TimedRobot):
 
         wpilib.SmartDashboard.putNumber("Proximity", proximity)
 
+        # `self.colorSensor.getColor()` returns a Color that is normalized.
+        # The R, G, B values are scaled so that they add up to 1.
+        # (`red + green + blue = 1`).
+        # `.getRawColor()` will return color data that is easier to
+        # visualize but may be harder to use effectively in your code.
+
+        rawDetectedColor = self.colorSensor.getRawColor()
+
+        wpilib.SmartDashboard.putNumber("Raw Red", rawDetectedColor.red)
+        wpilib.SmartDashboard.putNumber("Raw Green", rawDetectedColor.green)
+        wpilib.SmartDashboard.putNumber("Raw Blue", rawDetectedColor.blue)
+        wpilib.SmartDashboard.putNumber("Raw IR", rawDetectedColor.ir)
 
 if __name__ == "__main__":
     wpilib.run(MyRobot)
