@@ -11,7 +11,7 @@ base_package = "rev.color"
 artifact_id = "ColorSensorV3-cpp"
 group_id = "com.revrobotics.frc"
 repo_url = "http://www.revrobotics.com/content/sw/color-sensor-v3/sdk/maven"
-version = "1.0.1"
+version = "1.2.0"
 
 use_sources = true
 sources = [
