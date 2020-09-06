@@ -1,5 +1,5 @@
 
-*.py[cod]
+*.py[ciod]
 *.egg-info
 
 __pycache__
