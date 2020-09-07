@@ -11,8 +11,8 @@ from rev.color import ColorSensorV3
 
 class MyRobot(wpilib.TimedRobot):
     """
-        This is a simple example to show the values that can be read from the REV
-        Color Sensor V3
+    This is a simple example to show the values that can be read from the REV
+    Color Sensor V3
     """
 
     def robotInit(self):
