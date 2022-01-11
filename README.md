@@ -1,3 +1,6 @@
+**NOTE** Starting in 2022, the latest version of the REV Color sensor is now
+supported in the [robotpy-rev](https://github.com/robotpy/robotpy-rev) project.
+
 robotpy-rev-color
 =================
 
